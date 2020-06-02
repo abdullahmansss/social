@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "490541603478",
+    "firebase_url": "https://social-b8ca3.firebaseio.com",
+    "project_id": "social-b8ca3",
+    "storage_bucket": "social-b8ca3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:490541603478:android:dc28784d3de82253b440b7",
+        "android_client_info": {
+          "package_name": "softagi.mansour.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "490541603478-ij1as64sa577phembrm30it915saj0dd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "softagi.mansour.firebase",
+            "certificate_hash": "cfde583d177baa80081527dba7f830bc6b5ee08f"
+          }
+        },
+        {
+          "client_id": "490541603478-m86klpnib961l3ib7ir6eq6g54r757v6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAe6T3Ua9Fv-B6dqdjZh_pBBAfyTVN-6oA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "490541603478-m86klpnib961l3ib7ir6eq6g54r757v6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
