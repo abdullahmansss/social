@@ -15,9 +15,12 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
 import softagi.mansour.firebase.R;
+import softagi.mansour.firebase.models.userModel;
 
 public class constants
 {
+    public static userModel myChats;
+
     // progress dialog
     private static ProgressDialog progressDialog;
 

@@ -176,7 +176,7 @@ public class registerFragment extends Fragment
 
     private void saveNewUser(String name, String email, String mobile, String address, String uId, String imageUrl)
     {
-        userModel userModel = new userModel(name,email,mobile,address,imageUrl);
+        userModel userModel = new userModel(name,email,mobile,address,imageUrl,uId);
 
         constants.getDatabaseReference().child("Users").child(uId).setValue(userModel).addOnCompleteListener(new OnCompleteListener<Void>()
         {

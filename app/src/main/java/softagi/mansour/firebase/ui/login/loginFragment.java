@@ -85,6 +85,8 @@ public class loginFragment extends Fragment
                             {
                                 constants.saveUid(requireActivity(), task.getResult().getUser().getUid());
                                 constants.replaceFragment(loginFragment.this, new homeFragment(), false);
+
+                                // constants.saveUid(requireActivity(), "empty");
                             } else
                                 {
                                     constants.showToast(requireContext(), "please verify your email");

@@ -117,7 +117,7 @@ public class timelineFragment extends Fragment
         @Override
         public VH onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
         {
-            View view = LayoutInflater.from(requireContext()).inflate(R.layout.post_item, parent, false);
+            View view = LayoutInflater.from(requireContext()).inflate(R.layout.item_post, parent, false);
             return new VH(view);
         }
 

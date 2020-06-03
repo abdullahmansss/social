@@ -6,4 +6,7 @@
 
     <color name="like">#03A9F4</color>
     <color name="disLike">#888888</color>
+
+    <color name="chat">#00A1A1</color>
+    <color name="white">#FFF</color>
 </resources>

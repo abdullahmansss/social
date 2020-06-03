@@ -14,9 +14,10 @@ import com.google.android.material.tabs.TabLayoutMediator;
 import java.util.ArrayList;
 import java.util.List;
 import softagi.mansour.firebase.R;
-import softagi.mansour.firebase.ui.chats.chatsFragment;
+import softagi.mansour.firebase.ui.myChats.myChatsFragment;
 import softagi.mansour.firebase.ui.profile.profileFragment;
 import softagi.mansour.firebase.ui.timeline.timelineFragment;
+import softagi.mansour.firebase.ui.users.usersFragment;
 
 public class homeFragment extends Fragment
 {
@@ -45,12 +46,14 @@ public class homeFragment extends Fragment
 
         List<Fragment> fragments = new ArrayList<>();
         fragments.add(new timelineFragment());
-        fragments.add(new chatsFragment());
+        fragments.add(new usersFragment());
+        fragments.add(new myChatsFragment());
         fragments.add(new profileFragment());
 
         final List<String> names = new ArrayList<>();
 
         names.add("Timeline");
+        names.add("Users");
         names.add("Chats");
         names.add("Profile");
 
