@@ -27,14 +27,8 @@ public class constants
     // firebase auth
     private static FirebaseAuth auth;
 
-    // firebase database
-    private static FirebaseDatabase firebaseDatabase;
-
     // database reference
     private static DatabaseReference databaseReference;
-
-    // firebase storage
-    private static FirebaseStorage firebaseStorage;
 
     // storage reference
     private static StorageReference storageReference;
@@ -96,10 +90,12 @@ public class constants
     {
         auth = FirebaseAuth.getInstance();
 
-        firebaseDatabase = FirebaseDatabase.getInstance();
+        // firebase database
+        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference();
 
-        firebaseStorage = FirebaseStorage.getInstance();
+        // firebase storage
+        FirebaseStorage firebaseStorage = FirebaseStorage.getInstance();
         storageReference = firebaseStorage.getReference();
     }
 

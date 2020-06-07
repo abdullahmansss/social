@@ -45,9 +45,6 @@ public class chatsFragment extends Fragment
     private RecyclerView recyclerView;
 
     private EditText chatField;
-    private Toolbar toolbar;
-    private CircleImageView circleImageView;
-    private TextView textView;
 
     private List<chatModel> chatModels;
 
@@ -99,9 +96,9 @@ public class chatsFragment extends Fragment
     {
         recyclerView = mainView.findViewById(R.id.chat_recycler);
         chatField = mainView.findViewById(R.id.message_body_field);
-        toolbar = mainView.findViewById(R.id.chat_toolbar);
-        circleImageView = mainView.findViewById(R.id.chat_image);
-        textView = mainView.findViewById(R.id.chat_title);
+        Toolbar toolbar = mainView.findViewById(R.id.chat_toolbar);
+        CircleImageView circleImageView = mainView.findViewById(R.id.chat_image);
+        TextView textView = mainView.findViewById(R.id.chat_title);
         FloatingActionButton sendFab = mainView.findViewById(R.id.send_message_fab);
 
         chatModels = new ArrayList<>();
@@ -173,6 +170,9 @@ public class chatsFragment extends Fragment
 
             // mansour receive message from ridge
             constants.getDatabaseReference().child("Chats").child(receiverId).child(senderId).child(key).setValue(chatModel);
+
+            constants.getDatabaseReference().child("Chats").child(senderId).child(key).setValue(chatModel);
+            constants.getDatabaseReference().child("Chats").child(receiverId).child(key).setValue(chatModel);
 
             constants.getDatabaseReference().child("MyChats").child(senderId).child(receiverId).setValue(myChatsModel);
             constants.getDatabaseReference().child("MyChats").child(receiverId).child(senderId).setValue(myChatsModel);

@@ -7,6 +7,7 @@ import android.os.Bundle;
 
 import softagi.mansour.firebase.R;
 import softagi.mansour.firebase.ui.home.homeFragment;
+import softagi.mansour.firebase.ui.test.testFragment;
 import softagi.mansour.firebase.ui.welcome.welcomeFragment;
 import softagi.mansour.firebase.utils.constants;
 
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity
 
         if (!constants.getUid(this).equals("empty"))
         {
-            startFragment(new homeFragment());
+            startFragment(new testFragment());
         } else
             {
                 startFragment(new welcomeFragment());
