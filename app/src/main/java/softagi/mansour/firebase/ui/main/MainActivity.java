@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity
 
         if (!constants.getUid(this).equals("empty"))
         {
-            startFragment(new testFragment());
+            startFragment(new homeFragment());
         } else
             {
                 startFragment(new welcomeFragment());

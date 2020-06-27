@@ -193,7 +193,7 @@ public class newPostFragment extends Fragment
     {
         String postId = constants.getDatabaseReference().child("Posts").push().getKey();
 
-        postModel model = new postModel(image,name, time,text,imageUrl, type,postId);
+        postModel model = new postModel(image,name, time,text,imageUrl, type,postId, constants.getUid(requireActivity()));
 
         if (postId != null)
         {

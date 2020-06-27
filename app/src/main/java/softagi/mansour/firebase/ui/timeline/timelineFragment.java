@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -28,6 +29,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 import softagi.mansour.firebase.R;
 import softagi.mansour.firebase.models.postModel;
 import softagi.mansour.firebase.ui.timeline.posts.newPostFragment;
+import softagi.mansour.firebase.ui.userProfile.userProfileFragment;
 import softagi.mansour.firebase.utils.constants;
 
 public class timelineFragment extends Fragment
@@ -185,6 +187,15 @@ public class timelineFragment extends Fragment
                     setLikesCount(model.getPostId(), holder.postLikesCount);
                     isLike(model.getPostId(), holder.postLike);
                 }
+
+            holder.linearLayout.setOnClickListener(new View.OnClickListener()
+            {
+                @Override
+                public void onClick(View v)
+                {
+                    constants.replaceFragment(timelineFragment.this, new userProfileFragment(model.getuId()), true);
+                }
+            });
         }
 
         @Override
@@ -269,6 +280,7 @@ public class timelineFragment extends Fragment
         class VH extends RecyclerView.ViewHolder
         {
             CircleImageView postUserImage;
+            LinearLayout linearLayout;
             ImageView postImage;
             TextView postUserName;
             TextView postTime;
@@ -283,6 +295,7 @@ public class timelineFragment extends Fragment
                 super(itemView);
 
                 postUserImage = itemView.findViewById(R.id.post_user_image);
+                linearLayout = itemView.findViewById(R.id.user_info_linear);
                 postImage = itemView.findViewById(R.id.post_image);
                 postUserName = itemView.findViewById(R.id.post_user_name);
                 postTime = itemView.findViewById(R.id.post_time);

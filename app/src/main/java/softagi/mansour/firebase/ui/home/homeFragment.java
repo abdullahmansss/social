@@ -16,6 +16,8 @@ import java.util.List;
 import softagi.mansour.firebase.R;
 import softagi.mansour.firebase.ui.myChats.myChatsFragment;
 import softagi.mansour.firebase.ui.profile.profileFragment;
+import softagi.mansour.firebase.ui.rooms.myRooms.myRoomsFragment;
+import softagi.mansour.firebase.ui.rooms.roomsFragment;
 import softagi.mansour.firebase.ui.timeline.timelineFragment;
 import softagi.mansour.firebase.ui.users.usersFragment;
 
@@ -46,15 +48,17 @@ public class homeFragment extends Fragment
 
         List<Fragment> fragments = new ArrayList<>();
         fragments.add(new timelineFragment());
-        fragments.add(new usersFragment());
+        fragments.add(new myRoomsFragment());
         fragments.add(new myChatsFragment());
+        fragments.add(new roomsFragment());
         fragments.add(new profileFragment());
 
         final List<String> names = new ArrayList<>();
 
         names.add("Timeline");
-        names.add("Users");
+        names.add("My Rooms");
         names.add("Chats");
+        names.add("Rooms");
         names.add("Profile");
 
         tabsAdapter adapter = new tabsAdapter(homeFragment.this, fragments);

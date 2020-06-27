@@ -9,8 +9,9 @@ public class postModel
     private String postImage;
     private int type;
     private String postId;
+    private String uId;
 
-    public postModel(String userImage, String userName, long postTime, String postText, String postImage, int type, String postId) {
+    public postModel(String userImage, String userName, long postTime, String postText, String postImage, int type, String postId, String uId) {
         this.userImage = userImage;
         this.userName = userName;
         this.postTime = postTime;
@@ -18,9 +19,18 @@ public class postModel
         this.postImage = postImage;
         this.type = type;
         this.postId = postId;
+        this.uId = uId;
     }
 
     public postModel() {
+    }
+
+    public String getuId() {
+        return uId;
+    }
+
+    public void setuId(String uId) {
+        this.uId = uId;
     }
 
     public String getUserImage() {

@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import softagi.mansour.firebase.R;
+import softagi.mansour.firebase.models.userModel;
 import softagi.mansour.firebase.ui.login.loginFragment;
 import softagi.mansour.firebase.ui.register.registerFragment;
 import softagi.mansour.firebase.utils.constants;
@@ -16,6 +17,8 @@ import softagi.mansour.firebase.utils.constants;
 public class welcomeFragment extends Fragment
 {
     private View mainView;
+
+    userModel userModel = new userModel();
 
     @Nullable
     @Override
